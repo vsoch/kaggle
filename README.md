@@ -154,6 +154,13 @@ Starting upload for file cs.tar.gz
 100%|███████████████████████████████████████| 49.3M/49.3M [01:13<00:00, 708kB/s]
 Upload successful: cs.tar.gz (49MB)
 Starting upload for file m.tar.gz
+...
+Upload successful: cxx.tar.gz (57MB)
+The following URL will be available after processing (10-15 minutes)
+https://www.kaggle.com/stanfordcompute/code-images
+
+result
+https://www.kaggle.com/stanfordcompute/code-images
 ```
 
 Since there is a lot of additional metadata and description / helpers needed on your
