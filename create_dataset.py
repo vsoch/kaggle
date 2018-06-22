@@ -128,7 +128,7 @@ def create_dataset(keywords, username, title, files, license, name):
 
     # The function doesn't return the filename, but it's predictable
     meta_file = '/%s/datapackage.json' % workdir
-    meta_file = client.dataset_initialize(workdir)
+    client.dataset_initialize(workdir)
 
     # Update the metadata json
     with open(meta_file,'r') as fh:
