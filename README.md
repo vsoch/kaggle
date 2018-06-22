@@ -34,10 +34,9 @@ you shell into, and the usage accepts the arguments you would expect to generate
 a dataset.
 
 ```bash
-# python create_dataset.py 
-usage: create_dataset.py [-h] --username USERNAME --title TITLE
-                         [--id KAGGLE_ID] [--keywords KEYWORDS]
-                         [--files [FILES [FILES ...]]]
+usage: create_dataset.py [-h] --username USERNAME --title TITLE [--name NAME]
+                         [--keywords KEYWORDS] [--files [FILES [FILES ...]]]
+                         [--license LICENSE]
 
 Dinosaur Kaggle Dataseet Creator
 
@@ -45,15 +44,18 @@ optional arguments:
   -h, --help            show this help message and exit
   --username USERNAME   the kaggle username (in the url)
   --title TITLE, -t TITLE
-                        title for the dataset username/TITLE
-  --id KAGGLE_ID        The user or organization to upload to.
+                        verbose title for the dataset
+  --name NAME           The identifier (name) of the dataset
   --keywords KEYWORDS, -k KEYWORDS
                         comma separated (no spaces) keywords for dataset
   --files [FILES [FILES ...]], -f [FILES [FILES ...]]
                         dataset files
-usage: create_dataset.py [-h] --username USERNAME --title TITLE
-                         [--id KAGGLE_ID] [--keywords KEYWORDS]
-                         [--files [FILES [FILES ...]]]
+  --license LICENSE, -l LICENSE
+                        license name for file description, uses 'other' in
+                        metadata
+usage: create_dataset.py [-h] --username USERNAME --title TITLE [--name NAME]
+                         [--keywords KEYWORDS] [--files [FILES [FILES ...]]]
+                         [--license LICENSE]
 create_dataset.py: error: the following arguments are required: --username, --title/-t
 ```
 
