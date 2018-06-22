@@ -114,8 +114,9 @@ def create_dataset(keywords, username, title, files, license, name):
     '''
 
     # keywords likely come in as one,two,three
-    if not isinstance(keywords, list):
-        keywords = keywords.split(',')
+    if keywords is not None:
+        if not isinstance(keywords, list):
+            keywords = keywords.split(',')
 
     # create an API client
     client = KaggleApi()
@@ -136,7 +137,8 @@ def create_dataset(keywords, username, title, files, license, name):
     content['title'] = title
     content['id'] = '%s/%s' %(username, name)
     content['licenses'] = [{'name':'other'}]
-    content['keywords'] = keywords
+    if keywords is not None:
+        content['keywords'] = keywords
     content['resources'] = []
 
     print('Preparing upload folder...')
